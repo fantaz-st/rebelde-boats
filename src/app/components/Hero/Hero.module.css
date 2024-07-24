@@ -1,0 +1,105 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 100vh;
+  height: max-content;
+  display: flex;
+  align-items: flex-start;
+  transform: rotate(-90deg) translate(-100%, 0);
+  transform-origin: left top;
+  padding: 1.5em 3em;
+}
+
+.sidebar > div:nth-child(1) {
+  flex: 2;
+}
+
+.sidebar > div:nth-child(2) {
+  flex: 2;
+  display: flex;
+  gap: 6em;
+}
+
+.sidebar h1 {
+  text-transform: uppercase;
+  font-size: 7.5rem;
+  line-height: 85%;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  position: absolute;
+  top: 0;
+  /* width: 8000px; */
+  padding: 0 50vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: -1;
+}
+
+.slide {
+  width: 420px;
+  height: 500px;
+  background: #e3e3e3;
+}
+.slide h1 {
+  margin-bottom: 2rem;
+}
+
+.slide .contactUs {
+  position: absolute;
+
+  z-index: 9;
+}
+
+.slide:last-of-type {
+  background-color: transparent;
+  width: 600px;
+  height: 400px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* .content {
+  position: relative;
+  height: 600px;
+  background-color: red;
+}
+ */
+
+.sliderWrapper h1 {
+  font-weight: 400;
+  font-size: 3.25rem;
+}
+
+.sliderWrapper p {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
