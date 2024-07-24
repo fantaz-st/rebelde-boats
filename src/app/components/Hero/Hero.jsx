@@ -93,7 +93,7 @@ const Hero = () => {
               ) : (
                 <>
                   <h1>Looking to embark on an unforgettable adventure?</h1>
-                  <p>If you love our boat and want to rent it, we'd be thrilled to make your dream getaway a reality. Don't hesitate to contact us for more details or to book your perfect trip on the water. Let's create amazing memories together!</p>
+                  <p>If you love our boat and want to rent it, we&apos;d be thrilled to make your dream getaway a reality. Don&apos;t hesitate to contact us for more details or to book your perfect trip on the water. Let&apos;s create amazing memories together!</p>
                 </>
               )}
             </div>
