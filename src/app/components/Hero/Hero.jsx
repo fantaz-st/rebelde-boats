@@ -89,7 +89,7 @@ const Hero = () => {
             <div className={classes.slide} ref={(el) => (slidesRef.current[index] = el)} key={index}>
               {index < 13 ? (
                 // <Image src={`./images/img${index + 1}.jpg`} alt='' className={classes.img} alt="rebelde boats tours"
-                <img src={`./images/img${index + 1}.jpg`} alt='' className={classes.img} />
+                <img src={`./images/img${index + 1}.jpg`} alt='rebelde boats tours' className={classes.img} />
               ) : (
                 <>
                   <h1>Looking to embark on an unforgettable adventure?</h1>
