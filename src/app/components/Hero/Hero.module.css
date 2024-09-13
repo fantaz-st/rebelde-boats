@@ -1,105 +1,179 @@
 .container {
-  width: 100vw;
-  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height */
+  min-height: 100svh; /* Ensure it adapts to small viewport */
   overflow: hidden;
 }
 
-.sidebar {
-  width: 100vh;
-  height: max-content;
-  display: flex;
-  align-items: flex-start;
-  transform: rotate(-90deg) translate(-100%, 0);
-  transform-origin: left top;
-  padding: 1.5em 3em;
-}
-
-.sidebar > div:nth-child(1) {
-  flex: 2;
-}
-
-.sidebar > div:nth-child(2) {
-  flex: 2;
-  display: flex;
-  gap: 6em;
-}
-
-.sidebar h1 {
-  text-transform: uppercase;
-  font-size: 7.5rem;
-  line-height: 85%;
-  margin-bottom: 4rem;
-  font-weight: 400;
-}
-
-.slider {
+.container img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-}
-
-.sliderWrapper {
-  position: absolute;
-  top: 0;
-  /* width: 8000px; */
-  padding: 0 50vw;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  z-index: -1;
-}
-
-.slide {
-  width: 420px;
-  height: 500px;
-  background: #e3e3e3;
-}
-.slide h1 {
-  margin-bottom: 2rem;
-}
-
-.slide .contactUs {
-  position: absolute;
-
-  z-index: 9;
-}
-
-.slide:last-of-type {
-  background-color: transparent;
-  width: 600px;
-  height: 400px;
-}
-
-.img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
-.scrollDown {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* .content {
-  position: relative;
-  height: 600px;
-  background-color: red;
-}
- */
-
-.sliderWrapper h1 {
+.container h1,
+.container p,
+.container a {
+  color: #fff;
+  text-decoration: none;
   font-weight: 400;
-  font-size: 3.25rem;
 }
 
-.sliderWrapper p {
-  font-weight: 300;
-  font-size: 1.25rem;
+.container h1 {
+  font-size: 36px;
+}
+
+.container p,
+.container a {
+  font-size: 16px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cursor p {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.storyImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.storyContent {
+  position: absolute;
+  padding: 4em 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.indices {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.index {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.indexHighlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  transform: scaleX(100%);
+}
+
+.profile {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.profileIcon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.profileName {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.titleRow {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.link {
+  position: relative;
+  width: max-content;
+  margin: 2em 0;
+  padding: 0.25em 0;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+
+.titleRow h1,
+.profileName p {
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 900px) {
+  .storyContent {
+    width: 100%;
+    padding: 2em;
+  }
+
+  .cursor {
+    display: none;
+  }
 }
