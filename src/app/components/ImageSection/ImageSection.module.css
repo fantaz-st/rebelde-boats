@@ -1,0 +1,31 @@
+.imageSection {
+  height: 400vh; /* Allows for a scrollable section */
+  width: 100%;
+  position: relative; /* Corrected the 'position' property */
+}
+
+.images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh; /* Ensure the container takes up full viewport height */
+}
+
+.imageContainer {
+  overflow: hidden;
+  position: relative;
+  width: 23%; /* Slightly less than 25% to provide spacing between images */
+  height: 400px; /* Fixed height for the images */
+}
+
+.image {
+  width: 100%;
+  height: 100%; /* Ensures images fill the container */
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.image3 {
+  transform-origin: top center;
+}
